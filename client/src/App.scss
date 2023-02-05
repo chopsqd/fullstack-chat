@@ -201,6 +201,7 @@ body {
 .str-chat-channel-list {
   height: fit-content;
   margin-bottom: 8px;
+  background: #005fff;
 }
 
 .str-chat-channel {
@@ -225,7 +226,7 @@ body {
 }
 
 @media screen and (max-width: 960px) {
-  .str-chat-channel-list.team {
+  .str-chat-channel-list.team.light {
     position: unset;
     left: unset;
     top: unset;
