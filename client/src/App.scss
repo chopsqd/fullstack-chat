@@ -201,7 +201,7 @@ body {
 .str-chat-channel-list {
   height: fit-content;
   margin-bottom: 8px;
-  background: #005fff;
+  background: #006cff !important;
 }
 
 .str-chat-channel {
@@ -968,6 +968,7 @@ body {
   height: 16px;
   color: rgba(255, 255, 255, 0.66);
   margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .channel-preview__wrapper {
@@ -1824,4 +1825,8 @@ div.rta__autocomplete.str-chat__emojisearch {
   .channel-list__sidebar {
     display: none;
   }
+}
+
+.str-chat__thread-header-title {
+  margin-right: 5px !important;
 }
