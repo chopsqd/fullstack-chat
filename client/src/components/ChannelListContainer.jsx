@@ -14,7 +14,7 @@ const CompanyHeader = () => {
     )
 }
 
-const ChannelListContainer = () => {
+const ChannelListContainer = ({isCreating, setIsCreating, setCreateType, setIsEditing}) => {
     const logout = () => {
         cookies.remove('token')
         cookies.remove('userId')
@@ -31,15 +31,20 @@ const ChannelListContainer = () => {
         <>
             <Sidebar logout={logout}/>
             <div className="channel-list__list__wrapper">
-                <CompanyHeader />
-                <ChannelSearch />
+                <CompanyHeader/>
+                <ChannelSearch/>
                 <ChannelList
                     filters={{}}
-                    channelRenderFilterFn={() => {}}
+                    channelRenderFilterFn={() => {
+                    }}
                     List={(listProps) => (
                         <TeamChannelList
                             {...listProps}
                             type={"team"}
+                            isCreating={isCreating}
+                            setIsCreating={setIsCreating}
+                            setCreateType={setCreateType}
+                            setIsEditing={setIsEditing}
                         />
                     )}
                     Preview={(previewProps) => (
@@ -51,11 +56,16 @@ const ChannelListContainer = () => {
                 />
                 <ChannelList
                     filters={{}}
-                    channelRenderFilterFn={() => {}}
+                    channelRenderFilterFn={() => {
+                    }}
                     List={(listProps) => (
                         <TeamChannelList
                             {...listProps}
                             type={"messaging"}
+                            isCreating={isCreating}
+                            setIsCreating={setIsCreating}
+                            setCreateType={setCreateType}
+                            setIsEditing={setIsEditing}
                         />
                     )}
                     Preview={(previewProps) => (
